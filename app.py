@@ -114,7 +114,7 @@ st.progress(progress)
 
 # Define different steps
 if st.session_state.step == 1:
-    st.image('resources\header-wihout-bg.png', use_column_width=True)
+    st.image('resources/header-wihout-bg.png', use_column_width=True)
 
     st.title("Skills Bootcamp Enrollment and Registration Document")
     st.write("Provider: Prevista Ltd. | Sponsor: Surrey County Council | Website: www.prevista.co.uk")
