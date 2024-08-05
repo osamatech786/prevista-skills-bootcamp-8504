@@ -6,6 +6,8 @@ import io
 from docx import Document
 from docx.shared import Inches
 from streamlit_drawable_canvas import st_canvas
+import smtplib
+from email.message import EmailMessage
 
 # Set page configuration with a favicon
 st.set_page_config(
@@ -40,7 +42,7 @@ def send_email_with_attachments(sender_email, sender_password, receiver_email, s
         server.starttls()
         server.login(sender_email, sender_password)
         server.send_message(msg)
-        
+
 def is_signature_drawn(signature):
     # Check if signature is None or an empty numpy array
     if signature is None:
