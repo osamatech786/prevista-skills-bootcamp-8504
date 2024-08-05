@@ -465,7 +465,7 @@ if st.session_state.submission_done:
     doc.add_paragraph(f"Date: {submission_date}")
 
     # Save the document
-    doc_path = f"Int_Form_Submission_{st.session_state.full_name}.docx"
+    doc_path = f"Skills_Bootcamp_Submission_{st.session_state.full_name}.docx"
     doc.save(doc_path)
 
 # Email
