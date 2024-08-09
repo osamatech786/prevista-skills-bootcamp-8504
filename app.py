@@ -90,7 +90,7 @@ if 'step' not in st.session_state:
     st.session_state.support_needed = ""
     st.session_state.age_verified = False
     st.session_state.residency_verified = False
-    st.session_state.unemployment_verified = False
+    # st.session_state.unemployment_verified = False
     st.session_state.education_verified = False
     st.session_state.commitment_verified = False
     st.session_state.documents_verified = False
@@ -243,20 +243,20 @@ elif st.session_state.step == 8:
     st.title("> 7: Eligibility Criteria")
     st.write("Eligibility Requirements:")
     st.write("1. Age: Applicants must be 19 years or older.")
-    st.write("2. Employment Status: Applicants must be unemployed at the time of enrollment.")
-    st.write("3. Residency: Applicants must be residents of Surrey.")
-    st.write("4. Education: Applicants must have at least a basic level of literacy and numeracy.")
-    st.write("5. Commitment: Applicants must be able to commit to the full duration of the bootcamp (12 weeks, 3 days per week).")
+    # st.write("2. Employment Status: Applicants must be unemployed at the time of enrollment.")
+    st.write("2. Residency: Applicants must be residents of Surrey.")
+    st.write("3. Education: Applicants must have at least a basic level of literacy and numeracy.")
+    st.write("4. Commitment: Applicants must be able to commit to the full duration of the bootcamp (12 weeks, 3 days per week).")
     st.session_state.age_verified = st.checkbox("I confirm I am 19 years or older")
     st.session_state.residency_verified = st.checkbox("I confirm I am a resident of Surrey")
-    st.session_state.unemployment_verified = st.checkbox("I confirm I am currently unemployed")
+    # st.session_state.unemployment_verified = st.checkbox("I confirm I am currently unemployed")
     st.session_state.education_verified = st.checkbox("I confirm I have at least a basic level of literacy and numeracy")
     st.session_state.commitment_verified = st.checkbox("I confirm I can commit to the full duration of the bootcamp")
     
     if st.button("Next"):
         if (st.session_state.age_verified and st.session_state.residency_verified and
-            st.session_state.unemployment_verified and st.session_state.education_verified and
-            st.session_state.commitment_verified):
+            # st.session_state.unemployment_verified and 
+            st.session_state.education_verified and st.session_state.commitment_verified):
             st.session_state.step = 9
             st.experimental_rerun()
         else:
@@ -439,7 +439,7 @@ if st.session_state.submission_done:
     doc.add_heading('7. Eligibility Criteria', level=2)
     doc.add_paragraph(f"Age Verified: {'Yes' if st.session_state.age_verified else 'No'}")
     doc.add_paragraph(f"Residency Verified: {'Yes' if st.session_state.residency_verified else 'No'}")
-    doc.add_paragraph(f"Unemployment Verified: {'Yes' if st.session_state.unemployment_verified else 'No'}")
+    # doc.add_paragraph(f"Unemployment Verified: {'Yes' if st.session_state.unemployment_verified else 'No'}")
     doc.add_paragraph(f"Education Verified: {'Yes' if st.session_state.education_verified else 'No'}")
     doc.add_paragraph(f"Commitment Verified: {'Yes' if st.session_state.commitment_verified else 'No'}")
     
