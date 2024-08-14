@@ -299,8 +299,7 @@ if st.session_state.step == 1:
     Please complete the upcoming sections to finalize your enrollment.
     """)
     if st.button("Next"):
-        # st.session_state.step = 2
-        st.session_state.step = 10
+        st.session_state.step = 2
         st.experimental_rerun()
 
 elif st.session_state.step == 2:
