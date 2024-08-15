@@ -270,7 +270,6 @@ if 'step' not in st.session_state:
     st.session_state.gender = ''
     st.session_state.disabilities_health_condition = ''
     st.session_state.ethnicity = ''
-    st.session_state.statement_of_interest = ''
     
 
 # Define a function to calculate progress and percentage
@@ -722,7 +721,7 @@ if st.session_state.submission_done:
         'ph1': st.session_state.first_name,
         'ph2': st.session_state.sir_name,
         'ph3': st.session_state.ni_number,
-        'ph4': st.session_state.current_employer_postcode,
+        'ph4': st.session_state.postcode,
         'ph5': st.session_state.email,
         'ph6': st.session_state.phone_number,
         # 'ph7': st.session_state.placeholder_7,
@@ -753,7 +752,7 @@ if st.session_state.submission_done:
         
         'ph32': st.session_state.claiming_universal_credit,
         'ph33': st.session_state.caring_responsibilities,
-        'ph34': st.session_state.dob,
+        'ph34': st.session_state.dob.strftime("%d-%m-%Y"),
         'ph35': st.session_state.gender,
         'ph36': st.session_state.disabilities_health_condition,
         'ph37': st.session_state.ethnicity,
@@ -772,7 +771,7 @@ if st.session_state.submission_done:
         'ph47': st.session_state.preferred_industry,
         'ph48': st.session_state.support_needed,
 
-        'ph50': date.today(),
+        'ph50': date.today().strftime("%d-%m-%Y"),
     }
 
     template_file = "ph_skills_bootcamp.docx"
@@ -797,10 +796,10 @@ if st.session_state.submission_done:
     # load_dotenv()                                     # uncomment import of this library!
     # sender_email = os.getenv('EMAIL')
     # sender_password = os.getenv('PASSWORD')
-    # team_email = [sender_email]
-    team_email = ['muhammadoa@prevista.co.uk']
+    team_email = [sender_email]
+    # team_email = ['muhammadoa@prevista.co.uk']
     # receiver_email = sender_email
-    # receiver_email = 'mohamedr@prevista.co.uk'
+    # receiver_email = 'muhammadoa@prevista.co.uk'
 
     learner_email = [st.session_state.email]
     
