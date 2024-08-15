@@ -216,7 +216,7 @@ if 'step' not in st.session_state:
     st.session_state.step = 1
     st.session_state.first_name = ""
     st.session_state.sir_name = ""
-    st.session_state.dob = None
+    st.session_state.dob = ""
     st.session_state.address = ""
     st.session_state.city = ""
     st.session_state.postcode = ""
@@ -270,6 +270,8 @@ if 'step' not in st.session_state:
     st.session_state.gender = ''
     st.session_state.disabilities_health_condition = ''
     st.session_state.ethnicity = ''
+    st.session_state.statement_of_interest = ''
+    
 
 # Define a function to calculate progress and percentage
 def get_progress(step, total_steps=14):
@@ -756,13 +758,14 @@ if st.session_state.submission_done:
         'ph36': st.session_state.disabilities_health_condition,
         'ph37': st.session_state.ethnicity,
 
-        'ph38': st.session_state.emergency_contact_name,
-        'ph39': st.session_state.emergency_contact_relationship,
-        'ph40': st.session_state.emergency_contact_phone,
-        'ph41': st.session_state.emergency_contact_email,
+        # 'ph38': st.session_state.emergency_contact_name,
+        # 'ph39': st.session_state.emergency_contact_relationship,
+        
+        'ph40': st.session_state.emergency_contact_name,
+        'ph41': st.session_state.emergency_contact_relationship,
 
-        # 'ph42': st.session_state.placeholder_42,
-        # 'ph43': st.session_state.placeholder_43,
+        'ph42': st.session_state.emergency_contact_phone,
+        'ph43': st.session_state.emergency_contact_email,
         # 'ph44': st.session_state.placeholder_44,
         'ph45': st.session_state.statement_of_interest,
         'ph46': st.session_state.career_goals,
