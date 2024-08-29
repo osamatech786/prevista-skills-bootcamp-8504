@@ -1,11 +1,11 @@
 import streamlit as st
-from datetime import datetime, date
+from streamlit_drawable_canvas import st_canvas
+from datetime import datetime, date, timedelta
+import time
 from PIL import Image as PILImage
 import numpy as np
-import io
 from docx import Document
 from docx.shared import Inches
-from streamlit_drawable_canvas import st_canvas
 import smtplib
 from email.message import EmailMessage
 import shutil
@@ -15,7 +15,8 @@ import re
 # Set page configuration with a favicon
 st.set_page_config(
     page_title="Prevista Skills Bootcamp",
-    page_icon="https://lirp.cdn-website.com/d8120025/dms3rep/multi/opt/social-image-88w.png",  # Path to your logo
+    page_icon="https://lirp.cdn-website.com/d8120025/dms3rep/multi/opt/social-image-88w.png",
+    page_icon="📝",
     layout="centered"  # "centered" or "wide"
 )
 
@@ -273,7 +274,7 @@ if 'step' not in st.session_state:
     
 
 # Define a function to calculate progress and percentage
-def get_progress(step, total_steps=14):
+def get_progress(step, total_steps):
     return int((step / total_steps) * 100)
 
 
