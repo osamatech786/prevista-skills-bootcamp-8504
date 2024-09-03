@@ -16,7 +16,7 @@ import re
 st.set_page_config(
     page_title="Prevista Skills Bootcamp",
     page_icon="https://lirp.cdn-website.com/d8120025/dms3rep/multi/opt/social-image-88w.png",
-    page_icon="📝",
+    # page_icon="📝",
     layout="centered"  # "centered" or "wide"
 )
 

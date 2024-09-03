@@ -1,4 +1,6 @@
 .env
-Int_Form_Submission_*.docx
+SkillsBootcamp_Form_Submission_*.docx
 __pycache__
 graph.py
+resized_signature_image.png
+signature_image.png
